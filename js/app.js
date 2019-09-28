@@ -7,9 +7,14 @@
  //const overlay = document.getElementById("overlay");
 
  let game;
+ let phrase;
  startButton.addEventListener("click" , () => {
-   document.getElementById("overlay").style.display = "none";
-   game = new Game("one", thephrases, "three");
+
+   game = new Game(0, thephrases);
    game.startGame();
+   // console.log(game.getRandomPhrase());
+   // console.log(phrase);
+
+   console.log(game);
 
 });
