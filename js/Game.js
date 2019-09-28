@@ -4,6 +4,7 @@
 
  class Game {
 
+
     constructor(missed, phrases, activePhrase) {
 
       this.missed = missed;
@@ -13,7 +14,7 @@
     }
 
     startGame() {
-
+        alert("game started!");
 
     }
 
@@ -39,7 +40,7 @@
 
     gameOver() {
 
-      
+
     }
 
  }
