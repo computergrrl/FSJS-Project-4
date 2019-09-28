@@ -12,9 +12,11 @@
 
    game = new Game(0, thephrases);
    game.startGame();
+   phrase = new Phrase(game.activePhrase)
    // console.log(game.getRandomPhrase());
    // console.log(phrase);
 
-   console.log(game);
+  // console.log(game);
+   console.log(phrase)
 
 });

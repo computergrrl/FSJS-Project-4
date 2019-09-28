@@ -16,7 +16,7 @@
     startGame() {
       //first remove the screen overlay to show game screen
       document.getElementById("overlay").style.display = "none";
-      this.activePhrase = this.getRandomPhrase();
+      this.activePhrase = this.getRandomPhrase(); //call getRandomPhrase
 
     }
 
@@ -25,7 +25,6 @@
          a phrase from the phrases array */
       const rand = Math.floor(Math.random() * (this.phrases.length ));
       return this.phrases[rand];
-      //return this.phrases;
     }
 
     handleInteraction() {
