@@ -52,6 +52,7 @@
       for(let i=0; i < phraseLetters.length; i++) {
           if(phraseLetters[i].textContent == letter) {
             phraseLetters[i].className = "show letter";
+            i--; //this fixes a glitch where two of the same letter in a row wouldn't work.
           }
 
       }
