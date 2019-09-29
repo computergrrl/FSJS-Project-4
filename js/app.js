@@ -16,7 +16,7 @@
    game = new Game(thephrases); //instantiate new Game object
    game.startGame(); //call startGame method
 
-
+   console.log(game.activePhrase);
 
 
 });
