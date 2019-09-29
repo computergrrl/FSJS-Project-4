@@ -6,6 +6,7 @@
  const startButton = document.getElementById("btn__reset");
  const phraseDisplay = document.querySelector("#phrase ul");
  const phraseLetters = document.getElementsByClassName("hide letter");
+ const keyboardLetters = document.getElementsByClassName("key");
  let game;
  let phrase;
 
@@ -19,4 +20,10 @@
 
     phraseDisplay.innerHTML = phrase.addPhraseToDisplay();
 
+    // keyboardLetters.forEach(key => {
+    //    addEventListener("click", () => {
+    //      console.log("you clicked" + key.textContent);
+    //    })
+    // });
+    console.log(keyboardLetters);
 });
