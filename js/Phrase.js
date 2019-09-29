@@ -38,16 +38,23 @@
 
     checkLetter(letter) {
 
+      /*  if letter is found in array of characters returned from getLetters method then return true. Otherwise return false */
       if(this.getLetters().includes(letter)) {
         return true;
-      } 
+      }
         return false;
 
     }
 
 
-    showMatchedLetter() {
+    showMatchedLetter(letter) {
 
+      for(let i=0; i < phraseLetters.length; i++) {
+          if(phraseLetters[i].textContent == letter) {
+            phraseLetters[i].className = "show letter";
+          }
+
+      }
 
     }
 

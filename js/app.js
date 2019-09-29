@@ -5,6 +5,7 @@
  //declare some global variables
  const startButton = document.getElementById("btn__reset");
  const phraseDisplay = document.querySelector("#phrase ul");
+ const phraseLetters = document.getElementsByClassName("hide letter");
  let game;
  let phrase;
 
@@ -18,6 +19,4 @@
 
     phraseDisplay.innerHTML = phrase.addPhraseToDisplay();
 
-    console.log(phrase.phrase);
-    console.log(phrase.checkLetter("m"));
 });
