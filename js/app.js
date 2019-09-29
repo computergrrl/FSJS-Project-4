@@ -17,4 +17,7 @@
 
 
     phraseDisplay.innerHTML = phrase.addPhraseToDisplay();
+
+    console.log(phrase.phrase);
+    console.log(phrase.checkLetter("m"));
 });

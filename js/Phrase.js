@@ -36,9 +36,12 @@
     }
 
 
-    checkLetter() {
+    checkLetter(letter) {
 
-
+      if(this.getLetters().includes(letter)) {
+        return true;
+      } 
+        return false;
 
     }
 
