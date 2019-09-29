@@ -13,17 +13,10 @@
 
  startButton.addEventListener("click" , () => {
 
-   game = new Game(0, thephrases); //instantiate new Game object
+   game = new Game(thephrases); //instantiate new Game object
    game.startGame(); //call startGame method
-   phrase = new Phrase(game.activePhrase); //instantiate Phrase object
 
 
-    phraseDisplay.innerHTML = phrase.addPhraseToDisplay();
 
-    keyboardLetters.forEach(key => {
-       addEventListener("click", () => {
-         console.log("you clicked" + key.textContent);
-       })
-    });
 
 });

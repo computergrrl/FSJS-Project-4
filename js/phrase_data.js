@@ -51,7 +51,4 @@ const thephrases = [
 "tying the knot",
 "touch and go",
 "upside down",
-"vicious circle",
-"whistle blower",
-
 ];
