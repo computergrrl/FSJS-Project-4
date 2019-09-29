@@ -28,8 +28,8 @@
     }
 
     handleInteraction() {
-
-
+        /* Loop through all the keys and add event handlers to each of them*/
+        
     }
 
     removeLife() {

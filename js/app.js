@@ -20,10 +20,10 @@
 
     phraseDisplay.innerHTML = phrase.addPhraseToDisplay();
 
-    // keyboardLetters.forEach(key => {
-    //    addEventListener("click", () => {
-    //      console.log("you clicked" + key.textContent);
-    //    })
-    // });
-    console.log(keyboardLetters);
+    keyboardLetters.forEach(key => {
+       addEventListener("click", () => {
+         console.log("you clicked" + key.textContent);
+       })
+    });
+
 });
