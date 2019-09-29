@@ -19,7 +19,7 @@
 
     addPhraseToDisplay() {
 
-      let letters; //variable to hold html string
+      let letters = ""; //variable to hold html string
       this.getLetters().forEach( letter => {//loop through characters
 
         if(letter == " ") { // if character is a space add space class
