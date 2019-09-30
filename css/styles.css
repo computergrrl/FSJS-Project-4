@@ -28,6 +28,7 @@ body {
   flex-direction: column;
   display: flex;
   height: 100vh;
+  background-color: black;
 }
 
 li, ol, ul {
@@ -131,14 +132,20 @@ button {
 }
 
 .chosen {
-  background: #34eb52;
+  /* background: #34eb52; */
+  background: #77777a;
   border-radius: 5px;
+  border-width: 3px;
+  border-color: #34eb52;
   font-size: var(--font-size-medium);
   color: #FFFFFF;
 }
 
 .wrong {
-  background: red;
+  /* background: red; */
+  background: #77777a;
+  border-width: 3px;
+  border-color: red;
   color: #FFFFFF;
 }
 

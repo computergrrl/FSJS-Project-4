@@ -54,11 +54,13 @@
 
               event.target.classList.add("chosen");//add chosen class
               event.target.disabled = true;//disable button
+              event.target.style.cursor = "crosshair";
 
-            } else if (!this.activePhrase.checkLetter(letter)) {//if letter is passed to checkLetter method and returns false 
+            } else if (!this.activePhrase.checkLetter(letter)) {//if letter is passed to checkLetter method and returns false
 
                 event.target.classList.add("wrong");//add wrong class
                 event.target.disabled = true; //disable button
+                event.target.style.cursor = "crosshair";
 
             }
 
