@@ -46,7 +46,22 @@
         for(let i=0; i < keyboardLetters.length; i++){
 
           keyboardLetters[i].addEventListener("click", (event) => {
-             this.activePhrase.showMatchedLetter(event.target.textContent);
+            let letter = event.target.textContent;
+
+         //pass event.target into showMatchedLetter method
+         this.activePhrase.showMatchedLetter(letter);
+            if (this.activePhrase.checkLetter(letter)) {//if letter is passed to checkLetter method and returns true
+
+              event.target.classList.add("chosen");//add chosen class
+              event.target.disabled = true;//disable button
+
+            } else if (!this.activePhrase.checkLetter(letter)) {//if letter is passed to checkLetter method and returns false 
+
+                event.target.classList.add("wrong");//add wrong class
+                event.target.disabled = true; //disable button
+
+            }
+
         });
       }
 
