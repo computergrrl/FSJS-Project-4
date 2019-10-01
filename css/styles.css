@@ -28,7 +28,12 @@ body {
   flex-direction: column;
   display: flex;
   height: 100vh;
-  background-color: black;
+  /* background-color: black; */
+  background: url(slow_stars.gif)center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 li, ol, ul {
@@ -41,6 +46,7 @@ h2 {
   text-transform: uppercase;
   font-size: var(--font-size-large);
   margin: 0;
+  color: #4d8bf7;
 }
 
 h1 {
@@ -87,7 +93,8 @@ button {
 /* Title */
 
 .header {
-  color: #3a3f58;
+  color: #4d8bf7;
+
 }
 
 
@@ -111,8 +118,9 @@ button {
 
 
 .show {
-  color: #fff;
-  background-color: #4ac0d5;
+  color: #FFF;
+  /* background-color: #4ac0d5; */
+  background-color: #4d8bf7;
   font-size: 20px;
   height: 65px;
   width: 65px;
@@ -170,6 +178,11 @@ button {
 /* Overlay */
 
 #overlay {
+  background: url(stars.gif)no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   position: fixed;

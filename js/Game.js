@@ -9,8 +9,8 @@
 
       this.missed = 0;
       this.phrases = [];
-      /*  Following Creates a loop that makes an array of Phrase objects
-        1. Cycles through each phrase from the array of phrases that have been passed in (from separate file)
+      /*  Following for loop makes an array of Phrase objects
+        1. Loops through each phrase from the array of phrases that have been passed in (from separate file)
         2. Uses them each as parameters that are then passed into newly created Phrase objects
         3. Those Phrase objects are then in turn pushed into an array that's set to the this.phrases property  */
         for(let phrase of phrases) {
@@ -51,16 +51,18 @@
          //pass event.target into showMatchedLetter method
          this.activePhrase.showMatchedLetter(letter);
             if (this.activePhrase.checkLetter(letter)) {//if letter is passed to checkLetter method and returns true
-
+              playAudio(correct);
               event.target.classList.add("chosen");//add chosen class
               event.target.disabled = true;//disable button
               event.target.style.cursor = "crosshair";
+              this.checkForWin();
 
             } else if (!this.activePhrase.checkLetter(letter)) {//if letter is passed to checkLetter method and returns false
-
+                playAudio(wrong);
                 event.target.classList.add("wrong");//add wrong class
                 event.target.disabled = true; //disable button
                 event.target.style.cursor = "crosshair";
+                this.removeLife();
 
             }
 
