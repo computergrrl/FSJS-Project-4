@@ -8,6 +8,7 @@
  const phraseLetters = document.getElementsByClassName("hide letter");
  const keyboardLetters = document.getElementsByClassName("key");
  const body = document.getElementsByTagName("body");
+ const qwerty = document.getElementById("qwerty");
  let game;
  let phrase;
 
