@@ -19,6 +19,7 @@
         }
 
       this.activePhrase = null;
+      this.correctSelected = [];
 
     }
 
@@ -42,6 +43,7 @@
     }
 
     handleInteraction() {
+
         /* Loop through all the keys and add event handlers to each of them*/
         for(let i=0; i < keyboardLetters.length; i++){
 
@@ -55,7 +57,9 @@
               event.target.classList.add("chosen");//add chosen class
               event.target.disabled = true;//disable button
               event.target.style.cursor = "crosshair";
-              this.checkForWin();
+              this.correctSelected.push(letter);
+              if (this.checkForWin()) this.gameOver();
+
 
             } else if (!this.activePhrase.checkLetter(letter)) {//if letter is passed to checkLetter method and returns false
                 playAudio(wrong);
@@ -71,13 +75,13 @@
 
     removeLife() {
 
-          this.missed += 1;
-          let index = this.missed -1;
+          this.missed += 1; //increase missed property by 1
+          let index = this.missed -1; //set an index variable to use on lives array
           const source = "images/lostHeart.png";
-          lives[index].src = source;
+          lives[index].src = source; //set the next heart (starting at zero index) to the new src image)
 
           if (this.missed === 5) {
-            this.gameOver();
+            this.gameOver(); //call gameOver method if missed = 5
           }
 
 
@@ -85,13 +89,20 @@
 
     checkForWin() {
 
-
+        if (this.correctSelected.length ==
+            this.activePhrase.getUniqueLetters().length -1) {
+              return true;
+            }
+              return false;
     }
 
     gameOver() {
 
-        console.log("GAME OVER!");
-
+        if (this.checkForWin()) {
+          console.log("YOU WIN!!!");
+        } else {
+          console.log("YOU LOSE!!!");
+        }
     }
 
  }

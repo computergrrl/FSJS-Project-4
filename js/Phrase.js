@@ -17,6 +17,15 @@
 
     }
 
+    getUniqueLetters() {//this method returns an array of all the unique letters in the phrase
+
+      const getUnique = new Set(this.getLetters());//create an object of unique letters
+      const unique = [...getUnique];//turn above object back into an array
+      return unique;
+
+
+    }
+
     addPhraseToDisplay() {
 
       let letters = ""; //variable to hold html string
