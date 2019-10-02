@@ -29,7 +29,7 @@ body {
   display: flex;
   height: 100vh;
   /* background-color: black; */
-  background: url(slow_stars.gif)center center fixed; 
+  background: url(slow_stars.gif)center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -178,11 +178,7 @@ button {
 /* Overlay */
 
 #overlay {
-  background: url(stars.gif)no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -200,7 +196,11 @@ button {
 }
 
 .start {
-  background-color: #3a3f58;
+  background: url(stars.gif)no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .start a {
@@ -208,15 +208,20 @@ button {
 }
 
 .win {
+  background-image: none;
   background-color: var(--color-win);
+  color: #FFF;
 }
 
 .win a {
   color: var(--color-win);
+
 }
 
 .lose {
+  background-image: none;
   background-color: #f5785f;
+  color: #FFF;
 }
 
 .lose a {

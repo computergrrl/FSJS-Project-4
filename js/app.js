@@ -9,6 +9,7 @@
  const phraseLetters = document.getElementsByClassName("hide letter");
  const keyboardLetters = document.getElementsByClassName("key");
  const lives = document.querySelectorAll("#scoreboard ol li img");
+ const message = document.createElement("div");
 
 
  let game;
@@ -29,6 +30,7 @@ function playAudio(x) {//function to play audio on certain button clicks
    game = new Game(thephrases); //instantiate new Game object
    game.startGame(); //call startGame method
    playAudio(welcome);//play audio welcome sound
+   console.log(game.activePhrase);
 
 
 });

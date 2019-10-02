@@ -99,9 +99,23 @@
     gameOver() {
 
         if (this.checkForWin()) {//if checkForWin returns true then display overlay with .win class
+          overlay.classList.add("win");
+          const winMessage =
+          '<p>&nbsp;</p><h2>Congratulations! You guessed the phrase "' +
+          this.activePhrase.phrase + '"!</h2>';
+          message.innerHTML = winMessage;
+          overlay.prepend(message);
+          overlay.style.display = "block";
+
           console.log("YOU WIN!!!");
         } else {//otherwise player lost so display with .lose class
-          console.log("YOU LOSE!!!");
+          overlay.classList.add("lose");
+          const loseMessage =
+          '<p>&nbsp;</p><h2>Too bad! The phrase was "' +
+          this.activePhrase.phrase + '"</h2>';
+          message.innerHTML = loseMessage;
+          overlay.prepend(message);
+          overlay.style.display = "block";
         }
     }
 
