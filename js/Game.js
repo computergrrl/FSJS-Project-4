@@ -31,6 +31,7 @@
       phraseDisplay.innerHTML =
       this.activePhrase.addPhraseToDisplay();//calls method to add the phrase letters to the gameboard
 
+
       this.handleInteraction();//adds event listeners to all the letter keys on the display keyboard and game-user interactions.
 
     }
@@ -56,7 +57,6 @@
               playAudio(correct);
               event.target.classList.add("chosen");//add chosen class
               event.target.disabled = true;//disable button
-              event.target.style.cursor = "crosshair";
               this.correctSelected.push(letter);
               if (this.checkForWin()) this.gameOver();
 
@@ -65,7 +65,6 @@
                 playAudio(wrong);
                 event.target.classList.add("wrong");//add wrong class
                 event.target.disabled = true; //disable button
-                event.target.style.cursor = "crosshair";
                 this.removeLife();
 
             }//closes else if
@@ -117,6 +116,15 @@
           overlay.prepend(message);
           overlay.style.display = "block";
         }
+
+      for (let key of keyboardLetters) {
+          key.classList.remove("disabled", "chosen", "wrong");
+
+      }
+
+
     }
+
+
 
  }
