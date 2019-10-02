@@ -117,11 +117,15 @@
           overlay.style.display = "block";
         }
 
-      //loop through keyboard letters and remove classes and disabled 
+      //loop through keyboard letters and remove classes and disabled
       for (let key of keyboardLetters) {
           key.classList.remove("chosen", "wrong");
           key.disabled = false;
 
+          }
+
+      for (let life of lives) {
+        life.src = "images/liveHeart.png";
       }
 
 
