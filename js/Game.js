@@ -103,8 +103,11 @@
          let selected = e.key;
           for(let i=0; i < keyboardLetters.length; i++){
 
+            if (selected == keyboardLetters[i]) {
+
              //pass event.target into showMatchedLetter method
              this.activePhrase.showMatchedLetter(selected);
+
                 if (this.activePhrase.checkLetter(selected)) {//if letter is passed to checkLetter method and returns true
                   playAudio(correct);
                   keyboardLetters[i].classList.add("chosen");//add chosen class
@@ -120,12 +123,12 @@
                     this.missed += 1;
                     this.removeLife();
 
-                }
+                }//closes else if
+             }//closes main if statement
 
+           }//closes for loop
 
-           }
-
-     });
+     });//closes event listener
 
 
 /*****************KEYDOWN EVENT LISTENER ****************************/
