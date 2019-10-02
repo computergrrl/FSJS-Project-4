@@ -25,7 +25,7 @@
 
     startGame() {
       //first remove the screen overlay to show game screen
-      document.getElementById("overlay").style.display = "none";
+      overlay.style.display = "none";
       this.activePhrase = this.getRandomPhrase(); //call getRandomPhrase and set it to activePhrase property
 
       phraseDisplay.innerHTML =
@@ -88,7 +88,7 @@
     }
 
     checkForWin() {
-
+        /*check to see if unique letters in phrase is equal to the number of letters correctly guessed (minus 1 to account for the space character) */
         if (this.correctSelected.length ==
             this.activePhrase.getUniqueLetters().length -1) {
               return true;
@@ -98,9 +98,9 @@
 
     gameOver() {
 
-        if (this.checkForWin()) {
+        if (this.checkForWin()) {//if checkForWin returns true then display overlay with .win class
           console.log("YOU WIN!!!");
-        } else {
+        } else {//otherwise player lost so display with .lose class
           console.log("YOU LOSE!!!");
         }
     }

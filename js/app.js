@@ -3,6 +3,7 @@
  * app.js */
 
  //declare some global variables
+ const overlay = document.getElementById("overlay");
  const startButton = document.getElementById("btn__reset");
  const phraseDisplay = document.querySelector("#phrase ul");
  const phraseLetters = document.getElementsByClassName("hide letter");
