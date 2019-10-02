@@ -62,7 +62,6 @@
                 event.target.classList.add("wrong");//add wrong class
                 event.target.disabled = true; //disable button
                 event.target.style.cursor = "crosshair";
-                this.missed += 1;
                 this.removeLife();
 
             }//closes else if
@@ -71,6 +70,15 @@
     }
 
     removeLife() {
+
+          this.missed += 1;
+          let index = this.missed -1;
+          const source = "images/lostHeart.png";
+          lives[index].src = source;
+
+          if (this.missed === 5) {
+            this.gameOver();
+          }
 
 
     }
@@ -82,6 +90,7 @@
 
     gameOver() {
 
+        console.log("GAME OVER!");
 
     }
 

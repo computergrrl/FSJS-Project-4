@@ -7,6 +7,8 @@
  const phraseDisplay = document.querySelector("#phrase ul");
  const phraseLetters = document.getElementsByClassName("hide letter");
  const keyboardLetters = document.getElementsByClassName("key");
+ const lives = document.querySelectorAll("#scoreboard ol li img");
+ 
 
  let game;
  let phrase;
