@@ -7,26 +7,35 @@
  const phraseDisplay = document.querySelector("#phrase ul");
  const phraseLetters = document.getElementsByClassName("hide letter");
  const keyboardLetters = document.getElementsByClassName("key");
- const body = document.getElementsByTagName("body");
- const qwerty = document.getElementById("qwerty");
+
  let game;
  let phrase;
 
 
-
+//set vars for audio
 const intro = document.getElementById("intro");
 const welcome = document.getElementById("welcome");
 const correct = document.getElementById("correct");
 const wrong = document.getElementById("wrong");
-function playAudio(x) {
+
+function playAudio(x) {//function to play audio on certain button clicks
   x.play();
 }
  startButton.addEventListener("click" , () => {
 
    game = new Game(thephrases); //instantiate new Game object
    game.startGame(); //call startGame method
-   playAudio(welcome);
+   playAudio(welcome);//play audio welcome sound
    console.log(game.activePhrase);
 
 
+});
+
+//event listener for keydown event
+document.addEventListener("keydown" , (e) => {
+    for (let letter of keyboardLetters) { /*on keydown, start a for loop to go through all the keyboard letter keys from keyboardLetters variable declared above */
+        if (letter.innerText == e.key) {//when it finds a letter whose text value is equal to the key pressed then call the click method on that letter (below)
+          letter.click();
+        }
+    }
 });

@@ -65,79 +65,9 @@
                 this.missed += 1;
                 this.removeLife();
 
-            }
-
-        });
-
-
-
-//      }
-      // document.addEventListener("keydown", (event) => {
-      //     let letter = event.key;
-      //
-      //        //pass event.target into showMatchedLetter method
-      //        this.activePhrase.showMatchedLetter(letter);
-      //           if (this.activePhrase.checkLetter(letter)) {//if letter is passed to checkLetter method and returns true
-      //             playAudio(correct);
-      //             event.target.classList.add("chosen");//add chosen class
-      //             event.target.disabled = true;//disable button
-      //             event.target.style.cursor = "crosshair";
-      //             this.checkForWin();
-      //
-      //           } else if (!this.activePhrase.checkLetter(letter)) {//if letter is passed to checkLetter method and returns false
-      //               playAudio(wrong);
-      //               event.target.classList.add("wrong");//add wrong class
-      //               event.target.disabled = true; //disable button
-      //               event.target.style.cursor = "crosshair";
-      //               this.missed += 1;
-      //               this.removeLife();
-      //
-      //           }
-      //
-      //
-      //  });
-
-      }
-
-     document.addEventListener("keydown", (e) =>{
-         let selected = e.key;
-          for(let i=0; i < keyboardLetters.length; i++){
-
-            if (selected == keyboardLetters[i]) {
-
-             //pass event.target into showMatchedLetter method
-             this.activePhrase.showMatchedLetter(selected);
-
-                if (this.activePhrase.checkLetter(selected)) {//if letter is passed to checkLetter method and returns true
-                  playAudio(correct);
-                  keyboardLetters[i].classList.add("chosen");//add chosen class
-                  keyboardLetters[i].disabled = true;//disable button
-                  keyboardLetters[i].style.cursor = "crosshair";
-                  this.checkForWin();
-
-                } else if (!this.activePhrase.checkLetter(selected)) {//if letter is passed to checkLetter method and returns false
-                    playAudio(wrong);
-                    keyboardLetters[i].classList.add("wrong");//add wrong class
-                    keyboardLetters[i].disabled = true; //disable button
-                    keyboardLetters[i].style.cursor = "crosshair";
-                    this.missed += 1;
-                    this.removeLife();
-
-                }//closes else if
-             }//closes main if statement
-
-           }//closes for loop
-
-     });//closes event listener
-
-
-/*****************KEYDOWN EVENT LISTENER ****************************/
-            //   for(let i=0; i < keyboardLetters.length; i++){
-            //
-            //     keyboardLetters[i].addEventListener("keydown", (event) => {
-            //
-            // }
-
+            }//closes else if
+          }); //closes event listener
+        }//closes for loop
     }
 
     removeLife() {
