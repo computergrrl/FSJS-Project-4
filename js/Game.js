@@ -101,7 +101,7 @@
           overlay.classList.add("win");
           const winMessage =
           '<p>&nbsp;</p><h2>Congratulations! You guessed the phrase "' +
-          this.activePhrase.phrase + '"!</h2>';
+          this.activePhrase.phrase + '"!</h2><br><br>';
           message.innerHTML = winMessage;
           overlay.prepend(message);
           overlay.style.display = "block";
@@ -111,14 +111,16 @@
           overlay.classList.add("lose");
           const loseMessage =
           '<p>&nbsp;</p><h2>Too bad! The phrase was "' +
-          this.activePhrase.phrase + '"</h2>';
+          this.activePhrase.phrase + '"</h2><br><br>';
           message.innerHTML = loseMessage;
           overlay.prepend(message);
           overlay.style.display = "block";
         }
 
+      //loop through keyboard letters and remove classes and disabled 
       for (let key of keyboardLetters) {
-          key.classList.remove("disabled", "chosen", "wrong");
+          key.classList.remove("chosen", "wrong");
+          key.disabled = false;
 
       }
 

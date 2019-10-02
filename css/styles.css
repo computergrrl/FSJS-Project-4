@@ -208,22 +208,26 @@ button {
 }
 
 .win {
-  background-image: none;
+  background-image: url(nebula.jpg);
   background-color: var(--color-win);
   color: #FFF;
 }
 
-.win a {
-  color: var(--color-win);
+.win h2 {
+  color: #FFF;
+  /* color: var(--color-win); */
 
 }
 
 .lose {
-  background-image: none;
+  background-image:  url(planet_ruins.jpg);
+  background-color: var(--color-win);
+  color: #FFF;
   background-color: #f5785f;
   color: #FFF;
 }
 
-.lose a {
-  color: var(--color-lose);
+.lose h2 {
+  color: #FFF;
+  /* color: var(--color-lose); */
 }
