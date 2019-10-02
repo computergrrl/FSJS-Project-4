@@ -14,6 +14,7 @@
 * [x] Changed CSS styling of "chosen" and "wrong" buttons
 * [x] Added disabled property to selected buttons
 * [x] Included keydown event for offscreen keyboard functionality
+* [x] Added audio events
 
 ## Support
 Contact: amber.stevens@teamtreehouse.com
