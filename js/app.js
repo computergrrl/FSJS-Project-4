@@ -30,10 +30,20 @@ function playAudio(x) {//function to play audio on certain button clicks
    game = new Game(thephrases); //instantiate new Game object
    game.startGame(); //call startGame method
    playAudio(welcome);//play audio welcome sound
+   overlay.classList.remove("win", "lose");//remove win/lose class from overlay div 
    console.log(game.activePhrase);
 
 
 });
+
+for(let i=0; i < keyboardLetters.length; i++){
+
+  keyboardLetters[i].addEventListener("click", (event) => {
+    let letter = event.target.textContent;
+    game.handleInteraction(letter)
+  });
+}
+
 
 //event listener for keydown event
 document.addEventListener("keydown" , (e) => {

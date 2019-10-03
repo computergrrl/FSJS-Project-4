@@ -32,7 +32,7 @@
       this.activePhrase.addPhraseToDisplay();//calls method to add the phrase letters to the gameboard
 
 
-      this.handleInteraction();//adds event listeners to all the letter keys on the display keyboard and game-user interactions.
+      // this.handleInteraction();//adds event listeners to all the letter keys on the display keyboard and game-user interactions.
 
     }
 
@@ -43,13 +43,9 @@
       return this.phrases[rand];
     }
 
-    handleInteraction() {
+    handleInteraction(letter) {
 
         /* Loop through all the keys and add event handlers to each of them*/
-        for(let i=0; i < keyboardLetters.length; i++){
-
-          keyboardLetters[i].addEventListener("click", (event) => {
-            let letter = event.target.textContent;
 
          //pass event.target into showMatchedLetter method
          this.activePhrase.showMatchedLetter(letter);
@@ -68,8 +64,7 @@
                 this.removeLife();
 
             }//closes else if
-          }); //closes event listener
-        }//closes for loop
+
     }
 
     removeLife() {
@@ -122,12 +117,13 @@
           key.classList.remove("chosen", "wrong");
           key.disabled = false;
 
-          }
-
-      for (let life of lives) {
-        life.src = "images/liveHeart.png";
       }
 
+    
+
+      for (let life of lives) {//reset the hearts on scoreboard
+        life.src = "images/liveHeart.png";
+      }
 
     }
 
